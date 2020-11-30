@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #15161A;
+}
+
+#page-container{
+    /*border: 3px solid grey;*/
+    width: 80%;
+    height: auto;
+    /*Center the Div*/
+    margin: 0 auto;
+}
+
+#page-content{
+    /*so footer doesn't cover the last piece of text*/
+    padding-bottom: 20vh;
+}
+
+
+#big3colorbars{
+    height: 60vh;
+    margin-top: 10vh;
+}
+
+.link{
+    color: #E77C44;
+    font-style: italic;
+}
+
+#jumbo-greeting{
+    /*could not get the opening greeting to line up with the 3 color bars.
+    Not sure why but I think maybe a div or floating element is causing the 
+    title to push down. Could not figure out so used positioning to solve the problem.
+    */
+    position: absolute;
+    top: 20vh;
+    left: 46%;
+    font-size: 15vh;
+    /*To isolate 'Alex' from 'Hello Im'*/
+    word-break: break-all;
+    width: 5em;
+}
+
+.accent{
+    color: #E77C44;
+}
+
+.subtitle{
+    /*font size for main titles is half the size of the jumbo opening greeting title*/ 
+   font-size: calc(15vh / 2);
+}
+
+.paragraph{
+    /*font size for paragraph text is 3.5 or 7/2's the font size of the subtitle. half was too big*/
+    font-size: calc(7.5vh / 3.5);
+}
+
+#nav-tagline{
+    margin-top: 5vh;
+    padding: 5vh;
+    text-align: center;
+}
+
+.section-intro{
+    margin: 10vh;
+    padding: 10vh;
+    padding-bottom: 0vh;
+    margin-bottom: 0vh;
+}
+
+.section-intro > .section-intro-title{
+    font-size: 10vh;
+    /*added a width because without it titles were all finicky 
+    & weren't matching to one another stylistically*/
+    width: 50%;
+    float: right;
+    margin-right: 12vh;
+    margin-top: 0vh;
+}
+
+
+.colorbars{
+    height: 30vh;
+}
+
+.section-text-columns-container{
+    /*keep the text columns smaller*/
+    width: 70%;
+    /*21vw since I wanted to have the text box line up with the title*/
+    margin-left: 21vw;
+    /*could not figure out another way to line text columns closer to title. Tried clearing the float did not work.*/
+    position: relative;
+    bottom: 15vh;
+}
+
+.text-columns{
+     /*To split text & have side by side*/
+     column-count: 2;
+     -webkit-column-count: 2;
+     column-gap: 5vh;
+     -webkit-column-gap: 4vh;
+     text-align: left;
+}
+
+.skills-wrapper{
+    /*margin-bottom: 60vh;*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills-wrapper > .skill{
+    padding: 15px;
+    flex: 1 1 300px;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+.roundicons{
+    width: 30%;
+    margin-bottom: 2vh;
+}
+
+.skill > .skill-info{
+    width: 50%;
+    text-align: left;
+    /*center the div*/
+    margin: 0 auto;
+    margin-top: 2vh;
+}
+
+/*Photo Art Collage*/
+.row{
+    /*margin-left 10% since margin: 0 auto; wasn't quite centered. Worked for other divs
+    just not this one for some reason*/
+    margin-left: 10%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+.column{
+      -ms-flex: 45%; /* IE10 */
+      flex: 45%;
+      max-width: 45%;
+      padding: 0 4px;
+    }
+  
+.column img{
+      margin-top: 8px;
+      /*vertical-align: middle;*/
+      width: 100%;
+    }
+/*Photo Art Collage*/
+
+/*Mockup Section*/
+.work-wrapper{
+    width: 100%;
+    /*to contain floated children elements*/
+    overflow: hidden
+}
+
+.work-wrapper > .mockup-imgs{
+    width: 50%;
+    height: auto;
+    margin-bottom: 6vh;
+}
+
+.work-wrapper > #work-txt-wrap{
+    float: right;
+    /*48% width since the 2 1%'s I have will make width 50. Just wanted to have nice spacing
+    between the text and image*/
+    width: 48%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.process-explain{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#icon-img{
+    width: 20%;
+    height: auto;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+.text-columns-container{
+    /*keep the text columns smaller*/
+    width: 70%;
+    /*give some breathing room from the title*/
+    padding: 1%;
+    /*room for between each parts of the explainations*/
+    padding-bottom: 3%;
+    margin: 0 auto;
+}
+
+#scrollbtn{
+    display: none;
+    position: fixed;
+    bottom: 3vh;
+    /*weird number for left. Wanted a slight spacing between the icons and the icons*/
+    left: 83vw;
+    z-index: 99;
+    cursor: pointer;
+    border: none; 
+    outline: none;
+    font-size: 3vh;
+    padding: 1%;
+    background-color: #E77C44;
+    margin: 0vh;
+}
+
+#scrollbtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
+
+footer{
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 15vh;
+    background-color:#3153AC;
+    text-align: center;
+}
+
+#footer-wrapper{
+    margin-top: 1%;
+    display: inline-block;
+    width: 15%;
+    text-align: center;
+    padding: 1%;
+}
+
+#footer-txt{
+    font-size: 2vh;
+}
+
+.footer-icons{
+    height: auto;
+    width: 20%;
+    margin-bottom: 1.5vh;
+}
+
+/*github icon was slightly smaller than the rest of the footer 
+icons*/
+#github-icon{
+    height: auto;
+    width: 30%;
+    margin-bottom: 0.5vh;
+}
+
+.footer-icons:hover{
+    cursor: pointer;
+}
+
+/*Mock Up Page*/
+#split-section{
+    margin-top: 15vh;
+    /*contain floated children in container*/
+    overflow: hidden;
+}
+
+.main{
+    width: 60%;
+    float: left;
+}
+
+.info-text{
+    /*background-color: #3153AC;*/
+    background-color: green;
+    border-radius: 10px;
+    width: 40%;
+    float: left;
+}
+
+#mock-up-title{
+    text-align: center;
+    margin-top: 2vh;
+    padding: 5%;
+}
+
+.split-section-mockupimg{
+    width: 100%;
+    padding: 5%;
+    height: auto;
+    margin: 0 auto;
+}
+
+#right-section-p{
+    padding: 7%;
+    text-indent: 30px;
+}
+
+/*END Mock Up Page*/
+

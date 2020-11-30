@@ -1,0 +1,278 @@
+
+/*Phone Optimization*/
+
+@viewport {
+    width: device-width;
+    zoom: 1.0 ;
+  }
+
+/*Phone*/
+@media screen and (max-width: 480px){
+
+    /*Greeting Section*/
+    #big3colorbars{
+        height: 30vh;
+        margin-top: 5vh;
+        margin-left: 15vw;
+    }
+
+    #jumbo-greeting{
+        position: absolute;
+        top: 40vh;
+        left: 20%;
+        font-size: 8vh;
+        word-break: break-all;
+        width: 5em;
+    }
+
+    .subtitle{
+    /*font size for main titles is 1.5 the size of the jumbo opening greeting title*/ 
+       font-size: calc(8vh / 1.5);
+       margin-bottom: 2vh;
+    }
+    
+    #nav-tagline{
+        margin-top: 25vh;
+        padding: 5vh;
+        text-align: center;
+    }
+    /*End of Greeting Section*/
+    
+    /*Skills Section*/
+    .skills-wrapper{
+        margin-top: -10vh;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .roundicons{
+        width: 40%;
+        margin-bottom: 2vh;
+    }
+
+    
+    .skill > .skill-info{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 0vh;
+        text-align: center;
+        }
+
+
+    /*END of skills section*/
+
+    /*Section Text*/
+    .section-intro{
+        margin: auto;
+        padding: 10vh;
+        width: 90%;
+        padding-bottom:auto;
+        margin-top: 10vh;
+    }
+
+    .colorbars{
+        height: 20vh;
+        margin: auto;
+    }
+
+    .section-intro > .section-intro-title{
+        font-size: 7vh;
+        width: auto;
+        text-align: left;
+        margin: 5vw;
+        margin-top: 2vh;
+    }
+
+    #art-title-small{
+        margin-top: 2vh;
+        margin-right: 25vw;
+        text-align: left;
+    }
+
+    #longer-section-title{
+        margin-top: 2vh;
+        margin-right: -10vw;
+    }
+
+    .subtitle{
+        text-align: center;
+        font-size: 4vh;
+    }
+
+    .section-text-columns-container{
+        margin-top: 30vh;
+        margin-left: -15vw;
+        height: auto;
+        /*make the text wider, 100% still too small*/
+        width: 200%;
+    }
+    /*End of Section Text*/
+
+    .work-wrapper{
+        width: 100%;
+        /*to contain floated children elements*/
+        overflow: hidden
+    }
+    
+    .work-wrapper > .mockup-imgs{
+        width: 100%;
+        height: auto;
+        margin-bottom: 1vh;
+    }
+    
+    .work-wrapper > #work-txt-wrap{
+        width: 95%;
+        padding: 1%;
+        margin-bottom: 4vh;
+        margin-left: 4vw;
+    }
+    
+    /*Process Explaination*/
+    .process-explain{
+        margin-top: -15vh;
+    }
+    
+    #icon-img{
+        width: 35%;
+        height: auto;
+    }
+
+    /*END of Process Explaination*/
+
+
+    /*Footer Start*/
+    #footer-wrapper{
+        /*margin-top: 1%;*/
+        display: inline-block;
+        height: 90%;
+        width: 20%;
+        text-align: center;
+        padding: 1%;
+    }
+
+    .footer-icons{
+        height: auto;
+        width: 80%;
+        margin-bottom: 2.3vh;
+    }
+
+    #github-icon{
+        width: 100%;
+        margin-bottom: 2.4vh;
+    }
+
+    #email-icon{
+        width: 79%;
+        margin-bottom: 3.3vh;
+    }
+
+    .footer-txt{
+        margin-top: -3vh;
+        font-size: 8px;
+    }
+    /*End of footer section*/
+
+    #scrollbtn{
+        display: none;
+        position: fixed;
+        bottom: 16vh;
+        /*weird number for left. Wanted a slight spacing between the icons and the icons*/
+        left: 75vw;
+        z-index: 99;
+        cursor: pointer;
+        border: none; 
+        outline: none;
+        font-size: 15px;
+        padding: 1%;
+        background-color: #E77C44;
+        margin: 0vh;
+    }
+
+    .text-columns-container{
+        margin: 0 auto;
+        width: 80%;
+      }
+      
+    .text-columns{
+        column-count: initial;
+        /*width: 100%;*/
+    }
+
+    .row{
+        /*margin-left 10% since margin: 0 auto; wasn't quite centered. Worked for other divs
+        just not this one for some reason*/
+        margin-left: 5vw;
+        margin-top: -15vh;
+        width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+      }
+
+    /*grid images 100% width when viewing on smaller
+    screens*/
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+      }
+
+    /*Mock Up Page*/
+    /*#page-container{
+        border: 3px solid grey;
+        width: 80%;
+        height: auto;
+        Center the Div
+        margin: 0 auto;
+    }
+    
+    #page-content{
+        background-color: #040405;
+        so footer doesn't cover the last piece of text
+        padding-bottom: 20vh;
+    }
+
+    #split-section{
+        margin-top: 15vh;
+        contain floated children in container
+        overflow: hidden;
+    }
+
+    .main{
+        width: 60%;
+        float: left;
+    }
+
+    .info-text{
+        background-color: #3153AC;
+        border-radius: 10px;
+        width: 40%;
+        float: left;
+    }
+
+    #mock-up-title{
+        text-align: center;
+        margin-top: 2vh;
+        padding: 5%;
+    }
+
+    .split-section-mockupimg{
+        width: 100%;
+        padding: 5%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    #right-section-p{
+        padding: 7%;
+        text-indent: 30px;
+    }*/
+    /*End of Mockup Page*/
+}
+
+
+/*Tablet*/
+
+/*@media only screen and (max-width: 768px;){
+    
+}*/
